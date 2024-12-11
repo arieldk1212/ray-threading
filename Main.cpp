@@ -12,6 +12,10 @@ int main() {
       auto r = double(i) / (gImageWidth - 1);
       auto g = double(i) / (gImageHeight - 1);
       auto b = double(i) / (gImageWidth - 1);
+
+      int ir = int(255.999 * r);
+      int ig = int(255.999 * b);
+      int ib = int(255.999 * g);
     }
   }
 
