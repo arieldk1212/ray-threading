@@ -1,22 +1,17 @@
-#include <iostream>
+#include "Color.h"
 
 int main() {
   /*
-  * Image Creation
-  */
+   * Image Creation
+   */
   const int gImageWidth = 256;
   const int gImageHeight = 256;
 
   for (int i = 0; i < gImageHeight; i++) {
     for (int j = 0; j < gImageWidth; j++) {
-      auto r = double(i) / (gImageWidth - 1);
-      auto g = double(i) / (gImageHeight - 1);
-      auto b = double(i) / (gImageWidth - 1);
-
-      int ir = int(255.999 * r);
-      int ig = int(255.999 * b);
-      int ib = int(255.999 * g);
+      auto PixelColor = Color(double(i) / (gImageWidth - 1),
+                              double(j) / (gImageHeight - 1), 0);
+      WriteColor(std::cout, PixelColor);
     }
   }
-
 }
